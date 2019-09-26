@@ -17,7 +17,7 @@ class Complex{
         return img;
     }
     void disp(){
-        cout<<"Real part = "<<real<<" Imaginary part = "<<img<<endl;
+        cout<<"Complex number = "<<real<<" + "<<img<<"i"<<endl;
     }
     void sum(Complex obj1, Complex obj2){
         this->real = obj1.real + obj2.real;
