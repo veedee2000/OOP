@@ -11,31 +11,29 @@ class Complex{
         }
 
         friend ostream& operator <<(ostream& output,const Complex& c){
-            output<<c.real<<" "<<c.img<<"i";
+            output<<c.real<<" + "<<c.img<<"i";
             return output;
         }
 };
 
-// ostream& operator <<(ostream& output,const Complex& c){   Can't access private members from here.
-//     output<<c.real<<" "<<c.img<<"i";
-//     return output;
-// }
-
 template<typename T>
-void swap(T &x,T &y){
-    // cout<<"Before change: "<<x<<" "<<y<<endl;
+void Swap(T &x,T &y){
     T temp;
     temp = x;
     x = y;
     y = temp;
-    // cout<<"After change: "<<x<<" "<<y<<endl;
 }
 
 int main(){
     int a = 2,b = 5;
-    swap(a,b);
+    cout<<"Before Swap: "<<a<<", "<<b<<endl;
+    Swap(a,b);
+    cout<<"After Swap: "<<a<<", "<<b<<endl;
+    cout<<"Before Swap: ";
     Complex a1(2,4),b1(5,-1);
-    // swap(a1,b1);
-    cout<<a1<<b1<<endl;
+    cout<<a1<<", "<<b1<<endl;
+    Swap(a1,b1);
+    cout<<"Before Swap: ";
+    cout<<a1<<", "<<b1<<endl;
     return 0;
 }
