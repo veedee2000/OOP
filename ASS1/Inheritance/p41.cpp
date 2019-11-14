@@ -22,6 +22,7 @@ public:
     int getAge(){ return age; }
     int getHeight(){ return height; }
 };
+
 class Student: public Person {
     int roll;
     int current_class;
@@ -38,6 +39,7 @@ public:
     int getRoll(){ return roll; }
     int getCurrent_Class(){ return current_class; }
 };
+
 int main(){
     Person person("Varun Das",19,172);
     person.printDetails();
